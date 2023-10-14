@@ -1,0 +1,10 @@
+---
+- name: Install iperf3
+  apt:
+    name: iperf3
+    state: present
+
+- name: Install net-tools
+  apt:
+    name: net-tools
+    state: present

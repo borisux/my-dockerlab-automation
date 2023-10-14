@@ -1,0 +1,19 @@
+---
+- name: Upgrade hosts and install vim
+  hosts: nodes
+  become: yes
+  tasks:
+    - name: Apt update
+      apt:
+        update_cache: yes
+
+    - name: Apt Upgrade
+      apt:
+        upgrade: dist
+
+    - name: Install vim
+      apt:
+        name: vim
+        state: present
+  roles:
+    - common
